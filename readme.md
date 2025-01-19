@@ -1,6 +1,6 @@
-##**Dokumentacja Aplikacji**
+## **Dokumentacja Aplikacji**
 
-1. Opis aplikacji
+### 1. Opis aplikacji
 
 Aplikacja demonstracyjna ma na celu pokazanie działania szyfrowania AES (Advanced Encryption Standard) oraz ataku brute force w celu odszyfrowania danych. Składa się z dwóch głównych funkcji:
 
@@ -11,9 +11,11 @@ Aplikacja demonstracyjna ma na celu pokazanie działania szyfrowania AES (Advanc
 Aplikacja prezentuje zarówno zastosowanie kryptografii, jak i jej potencjalne słabości, jeśli hasło jest zbyt krótkie lub proste.
 
 
-2. Opis użytych algorytmów
 
-AES (Advanced Encryption Standard)
+
+### 2. Opis użytych algorytmów
+
+**AES (Advanced Encryption Standard)**
 
 - Zastosowanie: AES w trybie CBC został użyty do szyfrowania wiadomości tekstowej. Algorytm ten wykorzystuje klucz o długości 256 bitów oraz wektor inicjalizujący (IV) do zapewnienia losowości każdego procesu szyfrowania.
 
@@ -26,7 +28,7 @@ AES (Advanced Encryption Standard)
     b. IV jest generowany losowo i unikalnie dla każdej operacji szyfrowania.
 
 
-PBKDF2 (Password-Based Key Derivation Function 2)
+**PBKDF2 (Password-Based Key Derivation Function 2)**
 
 - Zastosowanie: PBKDF2 jest używany do wyprowadzania klucza kryptograficznego z hasła użytkownika i losowej soli.
 
@@ -35,20 +37,20 @@ PBKDF2 (Password-Based Key Derivation Function 2)
 - Bezpieczeństwo: Iteracje i sól zwiększają czas potrzebny na odgadnięcie klucza, czyniąc takie ataki bardziej kosztownymi.
 
 
-SHA-256 (Secure Hash Algorithm 256-bit)
+**SHA-256 (Secure Hash Algorithm 256-bit)**
 
 - Zastosowanie: SHA-256 jest wykorzystywany w PBKDF2 do generowania klucza kryptograficznego.
 
 - Bezpieczeństwo: Jest odporny na kolizje i trudny do odwrócenia, co czyni go bezpiecznym do zastosowań kryptograficznych.
 
-Padding PKCS7
+**Padding PKCS7**
 
 - Zastosowanie: Wiadomość, która nie jest wielokrotnością rozmiaru bloku AES (128 bitów), jest uzupełniana zgodnie z PKCS7, aby umożliwić poprawne szyfrowanie.
 
 
-3. Opis zastosowanego ataku (brute force)
+### 3. Opis zastosowanego ataku (brute force)
 
-Atak brute force
+**Atak brute force**
 
 - Opis: Atak brute force polega na przeszukiwaniu wszystkich możliwych kombinacji haseł, aż do znalezienia poprawnego. W aplikacji jest to realizowane przez iteracyjne testowanie haseł z zakresu od 0 do 999. Jeśli hasło jest poprawne, wiadomość zostaje odszyfrowana i wyświetlona.
 
@@ -69,7 +71,7 @@ Ograniczenia: Atak brute force działa tylko wtedy, gdy:
   b. Hasło jest krótkie lub proste.
     
 
-4. Opis przeciwdziałania takim atakom
+### 4. Opis przeciwdziałania takim atakom
 
 Aby zabezpieczyć aplikację przed atakami brute force, należy wprowadzić następujące środki:
 
