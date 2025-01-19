@@ -4,9 +4,9 @@ Dokumentacja Aplikacji
 
 Aplikacja demonstracyjna ma na celu pokazanie działania szyfrowania AES (Advanced Encryption Standard) oraz ataku brute force w celu odszyfrowania danych. Składa się z dwóch głównych funkcji:
 
-    a. zyfrowanie wiadomości: Wiadomość tekstowa jest szyfrowana za pomocą algorytmu AES w trybie CBC (Cipher Block Chaining), z użyciem klucza wyprowadzonego z hasła użytkownika.
+  a. Szyfrowanie wiadomości: Wiadomość tekstowa jest szyfrowana za pomocą algorytmu AES w trybie CBC (Cipher Block Chaining), z użyciem klucza wyprowadzonego z hasła użytkownika.
 
-    b. Atak brute force: Próba odgadnięcia hasła poprzez iteracyjne sprawdzanie możliwych kombinacji haseł (od 0 do 999). Jeśli hasło zostanie odgadnięte, aplikacja wyświetla odszyfrowaną wiadomość.
+  b. Atak brute force: Próba odgadnięcia hasła poprzez iteracyjne sprawdzanie możliwych kombinacji haseł (od 0 do 999). Jeśli hasło zostanie odgadnięte, aplikacja wyświetla odszyfrowaną wiadomość.
 
 Aplikacja prezentuje zarówno zastosowanie kryptografii, jak i jej potencjalne słabości, jeśli hasło jest zbyt krótkie lub proste.
 
@@ -64,43 +64,43 @@ Atak brute force
 
 Ograniczenia: Atak brute force działa tylko wtedy, gdy:
 
-    a. Przestrzeń kluczy (liczba możliwych haseł) jest niewielka.
+  a. Przestrzeń kluczy (liczba możliwych haseł) jest niewielka.
 
-    b. Hasło jest krótkie lub proste.
+  b. Hasło jest krótkie lub proste.
     
 
 4. Opis przeciwdziałania takim atakom
 
 Aby zabezpieczyć aplikację przed atakami brute force, należy wprowadzić następujące środki:
 
-    a. Zasady tworzenia silnych haseł:
+a. Zasady tworzenia silnych haseł:
 
-        - Minimalna długość: Hasło powinno mieć co najmniej 12 znaków.
+ - Minimalna długość: Hasło powinno mieć co najmniej 12 znaków.
 
-        - Zróżnicowanie znaków: Hasło powinno zawierać litery (duże i małe), cyfry oraz znaki specjalne.
+ - Zróżnicowanie znaków: Hasło powinno zawierać litery (duże i małe), cyfry oraz znaki specjalne.
 
-        - Brak wzorców: Unikać oczywistych wzorców, takich jak "12345" lub "password".
+ - Brak wzorców: Unikać oczywistych wzorców, takich jak "12345" lub "password".
 
-    b. Użycie mechanizmów ochronnych:
+ b. Użycie mechanizmów ochronnych:
 
-        - PBKDF2 z dużą liczbą iteracji: Większa liczba iteracji (np. 500 000) znacząco zwiększa czas potrzebny na odgadnięcie hasła.
+   - PBKDF2 z dużą liczbą iteracji: Większa liczba iteracji (np. 500 000) znacząco zwiększa czas potrzebny na odgadnięcie hasła.
 
-        - Losowa sól: Sól powinna być unikalna dla każdej operacji szyfrowania, aby zapobiec atakom słownikowym.
+  - Losowa sól: Sól powinna być unikalna dla każdej operacji szyfrowania, aby zapobiec atakom słownikowym.
 
-    c. Ograniczenie liczby prób logowania:
+ c. Ograniczenie liczby prób logowania:
 
-        - Blokowanie konta po określonej liczbie nieudanych prób.
+   - Blokowanie konta po określonej liczbie nieudanych prób.
 
-        - Wprowadzenie opóźnień między kolejnymi próbami logowania.
+   - Wprowadzenie opóźnień między kolejnymi próbami logowania.
 
-    d. Monitorowanie i audyt:
+  d. Monitorowanie i audyt:
 
-        - Analiza logów pod kątem podejrzanych aktywności (np. wiele nieudanych prób logowania).
+   - Analiza logów pod kątem podejrzanych aktywności (np. wiele nieudanych prób logowania).
 
-        - Stosowanie systemów wykrywania ataków (IDS/IPS).
+   - Stosowanie systemów wykrywania ataków (IDS/IPS).
 
-    e. Edukacja użytkowników:
+   e. Edukacja użytkowników:
 
-        - Informowanie użytkowników o ryzykach związanych z używaniem prostych haseł.
+   - Informowanie użytkowników o ryzykach związanych z używaniem prostych haseł.
 
-        - Wdrażanie zasad zmiany hasła co określony czas.
+   - Wdrażanie zasad zmiany hasła co określony czas.
