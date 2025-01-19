@@ -1,4 +1,4 @@
-Dokumentacja Aplikacji
+##**Dokumentacja Aplikacji**
 
 1. Opis aplikacji
 
